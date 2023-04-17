@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: #000;
+    background-color: #F9F9FB;
+}
+main{
+    display: grid;
+    grid-template-columns: 1000px;
+    grid-template-rows: 120px 550px;
+    justify-content: center;
+    align-items: center;
+    animation : up 1s ease-in-out ;
+    min-height: 80vh;
+}
+main header h2{
+    font-size: 8rem;
+    position: absolute;
+    animation : up 1s ease-in-out ;
+}
+main section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    animation : up 1s ease-in-out ;
+}
+main section .column-left{
+    color: #FFF;
+    background-color: #181D31;
+    width: 500px;
+    height: 460px;
+    padding: 3.2rem;
+    margin-top: -6px;
+    animation : up 1s ease-in-out ;
+}
+main section .title p{
+    font-size: 4rem;
+    font-weight: 600;
+    animation : up 1s ease-in-out ;
+}
+main section .title p::after{
+    content: "";
+    display: block;
+    width: 11rem;
+    height: 0.3rem;
+    background-color: #FFF;
+    animation : up 1s ease-in-out ;
+}
+main section .column-left .description p:nth-child(-n + 2){
+    margin-top: 1.6rem;
+    animation : up 1s ease-in-out ;
+}
+main section .column-left .networks{
+    margin-top: 1.6rem;
+    animation : up 1s ease-in-out ;
+}
+main section .column-left .networks i{
+    font-size: 2.4rem;
+    font-weight: 600;
+    animation : up 1s ease-in-out ;
+}
+@keyframes up {
+    from{
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 800px){
+    main {
+        grid-template-columns: 384px;
+        grid-template-rows: 112px 592px;
+        overflow-x: hidden;
+    }
+    main header h2{
+        font-size: 6.4rem;
+    }
+    main section{
+        grid-template-columns: 440px;
+        grid-template-rows: none;
+    }
+    main section .column-left{
+        padding: 3.2rem 4.8rem;
+        width: 426px;
+        height: 564px;
+    }
+
+    main section .column-left .description p:nth-child(1){
+        width: 100%;
+    }
+    main section .column-right img{
+        display: none;
+
+    }
+}
+@media screen and (max-width: 500px) {
+    main {
+        grid-template-columns: 320px;
+        grid-template-rows: 36px 592px;
+    }
+    main section{
+        grid-template-columns: 400px;
+        margin: 0 auto;
+    }
+    main section .column-left{
+        padding: 1.6rem 2.4rem;
+        width: 320px;
+        height: 480px;
+    }
+}
+@media screen and (max-width:280px){
+    main{
+        grid-template-columns: 260px;
+        grid-template-rows: 36px 592px;
+    }
+
+    main section{
+        grid-template-columns: 400px;
+        margin: 0 auto;
+    }
+    
+    main section .column-left{
+        padding: 1.6rem;
+        width: 260px;
+        height: 560px;
+    }
+    main section .column-left .title p{
+        font-size: 2.4rem;
+    }
+
+    main header h2{
+        font-size: 3.2rem;
+    }
+    main section .column-left .description p:nth-child(1)
+    {
+        width: 100%;
+    }
+}
